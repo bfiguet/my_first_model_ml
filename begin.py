@@ -18,19 +18,13 @@ salaries[['column Name 1', 'column Name 2']]
 #sns.scatterplot(data=salaries, x='Age', y='Salary') # relation of one col to another
 #sns.scatterplot(data=salaries, x='Age', y='Salary', hue='Gender') #to add a category to the vizualisation use 'hue'
 
-#1.First, let's create what will be our...
-"""
-	Features and target
-	Inputs and output
-	X and Y
-"""
-
+#1.Create Features and target (Inputs and output) x and y
 features = salaries.drop(['salary', 'department'], axis='columns') #input
 target = salaries['Salary'] #output
 
 #y = ax+b linear regression
 
-#2.. Time to import the Linear Regression model
+#2.Import the Linear Regression model
 model = LinearRegression() #init model
 
 #3. We train the model.
